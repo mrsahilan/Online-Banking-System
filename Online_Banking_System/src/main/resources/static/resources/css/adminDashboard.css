@@ -1,0 +1,132 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(
+        to bottom,
+        #FF9933 0%,
+        #FF9933 33%,
+        #F0F0F0 40%,
+        #FFFFFF 50%,
+        #F0F0F0 60%,
+        #138808 67%,
+        #138808 100%
+    );
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 1s ease-in;
+    color: #212529;
+}
+
+.dashboard-container {
+    width: 95%;
+    margin: 30px auto;
+    padding: 25px 30px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    animation: slideUp 0.8s ease;
+    color: #212529;
+}
+
+h1 {
+    text-align: center;
+    color: #FF6F00;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    color: #212529;
+}
+
+th, td {
+    padding: 12px 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: linear-gradient(90deg, #138808, #0B610B);
+    color: white;
+    font-weight: 600;
+    border-radius: 8px 8px 0 0;
+}
+
+tr:hover {
+    background-color: #FFF3E0; /* soft orange highlight */
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 13px;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    margin: 4px 2px;
+    width: 110px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(19, 136, 8, 0.5);
+    font-weight: 700;
+}
+
+.update-btn {
+    background: linear-gradient(90deg, #138808, #0B610B);
+}
+
+.update-btn:hover {
+    background: linear-gradient(90deg, #0B610B, #06470A);
+    transform: scale(1.05);
+}
+
+.delete-btn {
+    background: linear-gradient(90deg, #c62828, #8e0000);
+    box-shadow: 0 4px 12px rgba(198, 40, 40, 0.6);
+}
+
+.delete-btn:hover {
+    background: linear-gradient(90deg, #8e0000, #5a0000);
+    transform: scale(1.05);
+}
+
+@keyframes slideUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.logout-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.logout-btn {
+    background: linear-gradient(90deg, #138808, #0B610B);
+    color: white;
+    padding: 14px 35px;
+    font-size: 17px;
+    font-weight: 700;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 700px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(19, 136, 8, 0.5);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.logout-btn:hover {
+    background: linear-gradient(90deg, #0B610B, #06470A);
+    transform: translateY(-2px);
+}

@@ -1,0 +1,154 @@
+/* Body and background - same as dashboard & userLogin */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        to bottom,
+        #FF9933 0%,
+        #FF9933 33%,
+        #F0F0F0 40%,
+        #FFFFFF 50%,
+        #F0F0F0 60%,
+        #138808 67%,
+        #138808 100%
+    );
+
+    background-size: 300% 100%;
+    animation: horizontalWave 45s linear infinite;
+    color: #212529;
+    overflow: hidden;
+}
+
+@keyframes horizontalWave {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 300% 0%;
+    }
+}
+
+/* Container box */
+.send-money-container {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 40px 35px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    width: 360px;
+    max-width: 95vw;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 10;
+    animation: slideUp 0.6s ease;
+}
+
+/* Heading */
+.send-money-container h2 {
+    color: #FF9933; /* saffron */
+    font-weight: 700;
+    font-size: 28px;
+    margin: 0 0 15px;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+
+/* Labels */
+label {
+    font-weight: 700;
+    font-size: 14px;
+    color: #212529;
+}
+
+/* Text inputs */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 13px 15px;
+    margin-top: 5px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    outline: none;
+    background-color: #fff;
+    font-size: 15px;
+    color: #212529;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #FF9933; /* saffron */
+    box-shadow: 0 0 8px rgba(255, 153, 51, 0.5);
+}
+
+/* Button group container - flex for side by side */
+.button-group {
+    display: flex;
+    gap: 12px; /* small space between buttons */
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* Base style for both buttons to have equal width and height */
+.btn {
+    flex: 1; /* equal width */
+    padding: 14px 0;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    border: none;
+    user-select: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* Send Money button - green gradient */
+.send-money-btn {
+    background: linear-gradient(90deg, #138808, #0B610B);
+    box-shadow: 0 4px 12px rgba(19, 136, 8, 0.5);
+}
+
+.send-money-btn:hover {
+    background: linear-gradient(90deg, #0B610B, #06470A);
+    transform: scale(1.03);
+}
+
+/* Dashboard button - saffron gradient */
+.dashboard-btn {
+    background: linear-gradient(90deg, #FF9933, #cc7a00);
+    box-shadow: 0 4px 12px rgba(255, 153, 51, 0.5);
+}
+
+.dashboard-btn:hover {
+    background: linear-gradient(90deg, #cc7a00, #b36900);
+    transform: scale(1.03);
+}
+
+/* Error message */
+.error {
+    color: #d93025; /* red */
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+/* Animations */
+@keyframes slideUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}

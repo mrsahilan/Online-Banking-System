@@ -1,0 +1,121 @@
+/* Tricolor animated background */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        to bottom,
+        #FF9933 0%,
+        #FF9933 33%,
+        #F0F0F0 40%,
+        #FFFFFF 50%,
+        #F0F0F0 60%,
+        #138808 67%,
+        #138808 100%
+    );
+    background-size: 300% 100%;
+    animation: horizontalWave 45s linear infinite;
+    color: #212529;
+}
+
+@keyframes horizontalWave {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 300% 0%; }
+}
+
+/* Centered container for the form */
+.register-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px 35px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    max-width: 95vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.register-container h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #FF6F00;
+    margin-bottom: 2px; /* Reduced from larger value */
+}
+
+.bank-message {
+    font-size: 14px;
+    color: #444;
+    font-style: italic;
+    margin-top: 0;      /* Reduced top margin */
+    margin-bottom: 10px;
+}
+
+
+/* Input styles */
+.register-container input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    font-size: 15px;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.register-container input:focus {
+    border-color: #FF9933;
+    box-shadow: 0 0 8px rgba(255, 153, 51, 0.3);
+    outline: none;
+}
+
+/* Submit button */
+.register-container button {
+    width: 100%;
+    background: linear-gradient(90deg, #138808, #0B610B);
+    color: white;
+    padding: 12px 0;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(19, 136, 8, 0.4);
+    transition: 0.3s ease;
+}
+
+.register-container button:hover {
+    background: linear-gradient(90deg, #0B610B, #06470A);
+}
+
+/* Error message styling */
+.error-message {
+    color: #D32F2F;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: -8px;
+    margin-bottom: 10px;
+}
+
+/* Responsive: Make form fit on mobile screens */
+@media (max-width: 450px) {
+    .register-container {
+        width: 90vw;
+        padding: 30px 20px;
+    }
+
+    .register-container h2 {
+        font-size: 22px;
+    }
+
+    .register-container button {
+        font-size: 15px;
+        padding: 10px 0;
+    }
+}
